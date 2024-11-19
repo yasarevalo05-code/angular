@@ -19,7 +19,7 @@ En ts, agregar 2 variables strings que contengan mensajes y una variable boolean
 
 En el template, mostrar el valor de esa variable con interpolación.
 
-En el template, usando la directiva estructural ngIf, (importar CommonModule o NgIf en imports:[] del ts) ocultar uno de los mensajes usando la variable booleana.
+En el template, usando la directiva estructural ngIf, (importar NgIf en imports:[] del ts) ocultar uno de los mensajes usando la variable booleana.
 
 Incluir el componente creado en app.component.html, mediante su selector \<app-nombre-componente>\</app-nombre-componente> 
 
@@ -41,7 +41,7 @@ Crear un componente con ng generate component nombre-componente.
 
 Agregar un array con 4 objetos en ts.
 
-En el template, usando la directiva estructural ngFor, (importar CommonModule o NgFor en imports:[] del ts) recorrer el array para mostrar los 4 valores de cada objeto usando interpolación.
+En el template, usando la directiva estructural ngFor, (importar NgFor en imports:[] del ts) recorrer el array para mostrar los 4 valores de cada objeto usando interpolación.
 
 Incluir el componente creado en app.component.html, mediante su selector \<app-nombre-componente>\</app-nombre-componente> 
 
