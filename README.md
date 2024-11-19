@@ -21,7 +21,7 @@ En el template, mostrar el valor de esa variable con interpolación.
 
 En el template, usando la directiva estructural ngIf, ocultar uno de los mensajes usando la variable booleana.
 
-Incluir el componente creado en app.component.html, mediante su selector (<app-nombre-componente></app-nombre-componente>
+Incluir el componente creado en app.component.html, mediante su selector (<app-nombre-componente></app-nombre-componente>)
 
 Plus: agregar estilos a los elementos del template usando el .css del componente.
 
@@ -32,7 +32,7 @@ Agregar un objeto con 4 propiedades en ts.
 
 En el template, mostrar los 4 valores de ese objeto usando interpolación.
 
-Incluir el componente creado en app.component.html, mediante su selector (<app-nombre-componente></app-nombre-componente>
+Incluir el componente creado en app.component.html, mediante su selector (<app-nombre-componente></app-nombre-componente>)
 
 Plus: agregar estilos a los elementos del template usando el .css del componente.
 
@@ -43,7 +43,7 @@ Agregar un array con 4 objetos en ts.
 
 En el template, usando la directiva estructural ngFor, recorrer el array para mostrar los 4 valores de cada objeto usando interpolación.
 
-Incluir el componente creado en app.component.html, mediante su selector (<app-nombre-componente></app-nombre-componente>
+Incluir el componente creado en app.component.html, mediante su selector (<app-nombre-componente></app-nombre-componente>)
 
 Plus: agregar estilos a los elementos del template usando el .css del componente.
 
@@ -52,7 +52,7 @@ Crear un componente header con ng generate component nombre-componente.
 
 Usar el html y estilos del header que hicimos en la clase de HTML.
 
-Incluir el componente creado en app.component.html, mediante su selector (<app-nombre-componente></app-nombre-componente>
+Incluir el componente creado en app.component.html, mediante su selector (<app-nombre-componente></app-nombre-componente>)
 
 Plus: Crear una variable para mostrar el texto del header desde ts y en el template usando interpolación.
 
@@ -61,6 +61,6 @@ Crear un componente footer con ng generate component nombre-componente.
 
 Usar el html y estilos del footer que hicimos en la clase de HTML.
 
-Incluir el componente creado en app.component.html, mediante su selector (<app-nombre-componente></app-nombre-componente>
+Incluir el componente creado en app.component.html, mediante su selector (<app-nombre-componente></app-nombre-componente>)
 
 Plus: Crear una variable para mostrar el texto del footer desde ts y en el template usando interpolación.
