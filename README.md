@@ -21,7 +21,7 @@ En el template, mostrar el valor de esa variable con interpolación.
 
 En el template, usando la directiva estructural ngIf, (importar CommonModule o NgIf en imports:[] del ts) ocultar uno de los mensajes usando la variable booleana.
 
-Incluir el componente creado en app.component.html, mediante su selector "<app-nombre-componente></app-nombre-componente>"
+Incluir el componente creado en app.component.html, mediante su selector \ <app-nombre-componente></app-nombre-componente>\ 
 
 Plus: agregar estilos a los elementos del template usando el .css del componente.
 
