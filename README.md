@@ -5,12 +5,8 @@
 Objetivo: Aprender a crear un proyecto y levantar el servidor de desarrollo.
 
 Instalar Angular CLI (si aún no lo instalamos).
-
-
 Crear un proyecto con ng new nombre-app.
-
 Ejecutar el proyecto con ng serve.
-
 Mostrar la aplicación en el navegador.
 
 ## Ejercicio 2: Crear y Mostrar un Componente
