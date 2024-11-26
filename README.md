@@ -110,7 +110,7 @@ Crear dos componentes (`MovieListComponent` como padre y `MovieItemComponent` co
 
 1.  **Archivo TS (`movie-list.component.ts`):**
     
-    -   Declarar una lista de objetos `movies`, donde cada objeto tenga las propiedades `title`, `year`, y `description`.
+    -   Declarar una lista de 10 objetos `movies`, donde cada objeto tenga las propiedades `title`, `year`, y `description`.
     -   Crear una variable `selectedMovie` para almacenar la película seleccionada.
     -   Crear un método `onMovieSelected(movieTitle: string)` que asigne el valor recibido a la variable `selectedMovie`.
 2.  **Archivo HTML (`movie-list.component.html`):**
