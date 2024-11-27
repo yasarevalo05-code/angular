@@ -67,38 +67,9 @@ Plus: Crear una variable para mostrar el texto del footer desde ts y en el templ
 
 
 
-
-## **Ejercicio 7: Formulario de búsqueda de películas (Binding Bidireccional)**
-
-#### Objetivo:
-
-Crear un componente `SearchBar` que permita buscar películas en tiempo real utilizando binding bidireccional (`[(ngModel)]`).
-
-#### Pasos:
-
-##### **Configuración del componente `SearchBar`:**
-
-1.  **Archivo TS (`search-bar.component.ts`):**
-    
-    -   Declarar una variable `searchTerm` de tipo `string` y asignarle un valor inicial vacío.
-    -   Importar y agregar el módulo `FormsModule` en los imports, para habilitar el uso de `[(ngModel)]`.
-2.  **Archivo HTML (`search-bar.component.html`):**
-    
-    -   Crear un elemento `<input>` con un atributo `placeholder` que indique "Buscar películas...".
-    -   Implementar binding bidireccional con `[(ngModel)]` para enlazar el valor del input con la variable `searchTerm`.
-    -   Agregar un `<p>` que diga: **"Buscando..."**, interpolando el valor de `searchTerm` para mostrar en tiempo real lo que el usuario escribe.
-
-##### **Incorporar el componente en la aplicación:**
-
--   En el archivo `app.component.html`, incluir el selector del componente `SearchBar`.
-
-##### **Plus (opcional):**
-
--   Agregar estilos tanto para desktop como para mobile, asegurando que el campo de búsqueda sea responsivo y tenga diseño/colores diferentes.
-
 ----------
 
-## **Ejercicio 8: Lista de películas con comunicación padre-hijo**
+## **Ejercicio 7: Lista de películas con comunicación padre-hijo**
 
 #### Objetivo:
 
@@ -144,3 +115,35 @@ Crear dos componentes (`MovieListComponent` como padre y `MovieItemComponent` co
     -   Usar esta interfaz para tipar la lista de películas y la propiedad `@Input` en el componente hijo.
 2.  Estilizar las películas con un diseño de tarjetas (cards) y hacerlo responsivo para escritorio y móviles.
 3.  Añadir imágenes a las películas para un diseño más atractivo.
+
+
+----------
+
+## **Ejercicio 8: Formulario de búsqueda de películas (Binding Bidireccional)**
+
+#### Objetivo:
+
+Crear un componente `SearchBar` que permita buscar películas en tiempo real utilizando binding bidireccional (`[(ngModel)]`).
+
+#### Pasos:
+
+##### **Configuración del componente `SearchBar`:**
+
+1.  **Archivo TS (`search-bar.component.ts`):**
+    
+    -   Declarar una variable `searchTerm` de tipo `string` y asignarle un valor inicial vacío.
+    -   Importar y agregar el módulo `FormsModule` en los imports, para habilitar el uso de `[(ngModel)]`.
+2.  **Archivo HTML (`search-bar.component.html`):**
+    
+    -   Crear un elemento `<input>` con un atributo `placeholder` que indique "Buscar películas...".
+    -   Implementar binding bidireccional con `[(ngModel)]` para enlazar el valor del input con la variable `searchTerm`.
+    -   Agregar un `<p>` que diga: **"Buscando..."**, interpolando el valor de `searchTerm` para mostrar en tiempo real lo que el usuario escribe.
+
+##### **Incorporar el componente en la aplicación:**
+
+-   En el archivo `app.component.html`, incluir el selector del componente `SearchBar`.
+
+##### **Plus (opcional):**
+
+-   Agregar estilos tanto para desktop como para mobile, asegurando que el campo de búsqueda sea responsivo y tenga diseño/colores diferentes.
+
