@@ -1,5 +1,4 @@
-# Angular
-# Trabajo Final
+# Angular - Trabajo Final
 
 ## Ejercicio 1: Crear un Proyecto Angular
 Objetivo: Aprender a crear un proyecto y levantar el servidor de desarrollo.
@@ -149,7 +148,7 @@ Crear un componente `SearchBar` que permita buscar películas en tiempo real uti
 
 ----------
 
-## **Ejercicio 9: Datos inyectados desde servicios **
+## Ejercicio 9: Datos inyectados desde servicios 
 
 #### Objetivo:
 Compartir datos a componentes mediante inyección de dependencias
