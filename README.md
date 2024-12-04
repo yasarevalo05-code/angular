@@ -177,7 +177,12 @@ Ejemplo:
          this.movies = this.movieService.getMovies(); 
       }
 
-Implementar OnInit (interfaz) desde la declaración de nuestra clase.
+Implementar OnInit (interfaz) desde la declaración de nuestra clase:
+
+
+    export  class  MovieListComponent  implements  OnInit {
+
+
 
 ## **Ejercicio 11: Ruteo y Navegación**
 
