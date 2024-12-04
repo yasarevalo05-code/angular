@@ -174,7 +174,7 @@ Ejemplo:
 
 
        ngOnInit(): void {
-         //this.movies = this.movieService.getMovies(); 
+         this.movies = this.movieService.getMovies(); 
       }
 
 
