@@ -177,6 +177,7 @@ Ejemplo:
          this.movies = this.movieService.getMovies(); 
       }
 
+Implementar OnInit (interfaz) desde la declaración de nuestra clase.
 
 ## **Ejercicio 11: Ruteo y Navegación**
 
