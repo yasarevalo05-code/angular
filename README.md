@@ -204,3 +204,54 @@ Crear componente llamado **Movies**, para contener los componentes de movie list
 En el archivo app.routes.ts, agregar 2 paths: pelis y ejercicios. Cada uno con su componente MovieComponent y EjerciciosComponent respectivamente.
 
 Opcional: Prácticas online de ruteo: https://angular.dev/tutorials/learn-angular/13-define-a-route#define-a-route-in-approutests
+
+
+
+## Ejercicio 12: Integración con endpoints de APIs mediante HTTP GET
+
+1. Configurar HTTP.
+   En app.config.ts, configuramos http con provideHttpClient() para poder inyectarlo en los servicios.
+
+El archivo app.config.ts debería quedar:
+
+
+    import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+    import { provideRouter } from  '@angular/router'; 
+    import { routes } from  './app.routes';
+    import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+    
+    export  const  appConfig:  ApplicationConfig  = {
+        providers: [
+          provideHttpClient(withInterceptorsFromDi()),
+          provideZoneChangeDetection({ eventCoalescing:  true }),
+          provideRouter(routes), 
+        ],
+     };
+
+
+
+3. Inyectar Http en el **servicio** de movies con
+ `constructor(private  http:  HttpClient) {}`
+ 4. Crear un método para realizar una petición GET, usando HTTP. 
+ Ejemplo:
+
+
+        getEpisodes(): Observable<{Episodes: []}>
+         {
+        	return  this.http.get<{Episodes: []}>('https://www.omdbapi.com/?apikey=2ff6c6e4&t=From&Season=1')
+         } 
+
+	Se pueden cambiar los parámetros del mismo endpoint para obtener otra serie y otra temporada (season), utilizando la misma api key (2ff6c6e4)
+
+3. En el componente, inyectar el servicio, realizar la suscripción para ejecutar la llamada y obtener los títulos de los episodios. 
+Los títulos de los episodios, se pueden mostrar en un componente ya creado, o en un nuevo componente para series con su propio ruteo *series* (opcional a elección).
+
+Ejemplo de suscripción:
+
+
+    this.seriesService.getEpisodes().subscribe(series => { this.series = series.Episodes; })
+
+
+
+Guía Obvservable: https://rxjs.dev/guide/observable 
+
