@@ -255,10 +255,11 @@ Ejemplo de suscripción:
 
 Guía Obvservable: https://rxjs.dev/guide/observable 
 
-
-## Ejercicio 13: Desarrollar las siguientes consignas (son opcionales)
+## Ejercicio 13: Accesibilidad
 1. Accesibilidad: agregar 1 ARIA y probar https://www.w3schools.com/accessibility/accessibility_screen_readers.php
-2. Agregar 1 test para 1 componente.
-3. Configurar ambiente local para consumir api local (creada en clase backend).
+
+## Ejercicio 14: Desarrollar las siguientes consignas (son opcionales)
+1. Agregar 1 test para 1 componente.
+2. Configurar ambiente local para consumir api local (creada en clase backend).
 
 
