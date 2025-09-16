@@ -118,7 +118,7 @@ Crear dos componentes (`MovieListComponent` como padre y `MovieItemComponent` co
 
 ----------
 
-## Ejercicio 8: Formulario de Tickets
+## Ejercicio 8: Reactive Forms - Formulario de Tickets
 Crear componente para el formulario: ng generate component ticket-form
 
 Configurar el formulario en el componente TS (ticket-form.component.ts):
