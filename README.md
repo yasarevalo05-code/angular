@@ -118,33 +118,45 @@ Crear dos componentes (`MovieListComponent` como padre y `MovieItemComponent` co
 
 ----------
 
-## **Ejercicio 8: Formulario de búsqueda de películas (Binding Bidireccional)**
+## Ejercicio 8: Formulario de Tickets
+Crear componente para el formulario: ng generate component ticket-form
 
-#### Objetivo:
+Configurar el formulario en el componente TS (ticket-form.component.ts):
 
-Crear un componente `SearchBar` que permita buscar películas en tiempo real utilizando binding bidireccional (`[(ngModel)]`).
+Importar dependencias:
 
-#### Pasos:
+- import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms'; 
+- imports: [ReactiveFormsModule],
 
-##### **Configuración del componente `SearchBar`:**
+Crear una propiedad ticketForm de tipo FormGroup con dos controles:
 
-1.  **Archivo TS (`search-bar.component.ts`):**
-    
-    -   Declarar una variable `searchTerm` de tipo `string` y asignarle un valor inicial vacío.
-    -   Importar y agregar el módulo `FormsModule` en los imports, para habilitar el uso de `[(ngModel)]`.
-2.  **Archivo HTML (`search-bar.component.html`):**
-    
-    -   Crear un elemento `<input>` con un atributo `placeholder` que indique "Buscar películas...".
-    -   Implementar binding bidireccional con `[(ngModel)]` para enlazar el valor del input con la variable `searchTerm`.
-    -   Agregar un `<p>` que diga: **"Buscando..."**, interpolando el valor de `searchTerm` para mostrar en tiempo real lo que el usuario escribe.
+adultTickets inicializado en 0. childTickets inicializado en 0.
 
-##### **Incorporar el componente en la aplicación:**
+Crear una variable totalTickets.
 
--   En el archivo `app.component.html`, incluir el selector del componente `SearchBar`.
+Crear un método calculateTotal() que sume los valores de adultTickets y childTickets y los guarde en totalTickets.
+
+Configurar el template (ticket-form.component.html):
+
+Crear un formulario con [formGroup]="ticketForm".
+
+Agregar un input con formControlName="adultTickets". Agregar un input con formControlName="childTickets".
+
+Agregar un botón que al hacer clic ejecute el método calculateTotal().
+
+Mostrar el resultado en un
+
+con el texto:
+
+🎟️ Total de Entradas: X
+
+Incorporar el componente en la aplicación:
+Incorporar el componente en app.html
 
 ##### **Plus (opcional):**
 
--   Agregar estilos tanto para desktop como para mobile, asegurando que el campo de búsqueda sea responsivo y tenga diseño/colores diferentes.
+-  Agregar estilos correspondientes tanto para desktop como para mobile, asegurando que sea responsivo y tenga diseño/colores diferentes.
+
 
 ----------
 
@@ -198,11 +210,12 @@ Antes de empezar, necesitamos limpiar nuestro app.component.html, de manera que 
 
 Crear 2 componentes que vamos a usar para "envolver" a otros componentes:
 Crear componente llamado **Ejercicios**, para contener los componentes que hicimos de ejercicios, para esto, implementamos los selectores de cada componente de ejercicio y los importamos.
-Crear componente llamado **Movies**, para contener los componentes de movie list y searchbar. 
+Crear componente llamado **Movies**, para contener los componentes de movie list. 
 
 
 En el archivo app.routes.ts, agregar 2 paths: pelis y ejercicios. Cada uno con su componente MovieComponent y EjerciciosComponent respectivamente.
 
+Opcional: agregar sección ruteada para el ejercicio de Entradas/Tickets.
 Opcional: Prácticas online de ruteo: https://angular.dev/tutorials/learn-angular/13-define-a-route#define-a-route-in-approutests
 
 
