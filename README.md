@@ -118,47 +118,30 @@ Crear dos componentes (`MovieListComponent` como padre y `MovieItemComponent` co
 
 ----------
 
-## Ejercicio 8: Reactive Forms - Formulario de Tickets
-Crear componente para el formulario: ng generate component ticket-form
+## **Ejercicio 8: Ruteo y Navegación**
 
-Configurar el formulario en el componente TS (ticket-form.component.ts):
+#### Objetivo:
+Armar ruteo para 2 páginas y re-estructuración de app para envolver nuestros componentes.
 
-Importar dependencias:
+#### Pasos:
+Antes de empezar, necesitamos limpiar nuestro app.component.html, de manera que únicamente nos quede header, footer y router-outlet: 
 
-- import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms'; 
-- imports: [ReactiveFormsModule],
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
 
-Crear una propiedad ticketForm de tipo FormGroup con dos controles:
+Crear 2 componentes que vamos a usar para "envolver" a otros componentes:
+Crear componente llamado **Ejercicios**, para contener los componentes que hicimos de ejercicios, para esto, implementamos los selectores de cada componente de ejercicio y los importamos.
+Crear componente llamado **Movies**, para contener los componentes de movie list. 
 
-adultTickets inicializado en 0. childTickets inicializado en 0.
 
-Crear una variable totalTickets.
+En el archivo app.routes.ts, agregar 2 paths: pelis y ejercicios. Cada uno con su componente MovieComponent y EjerciciosComponent respectivamente.
 
-Crear un método calculateTotal() que sume los valores de adultTickets y childTickets y los guarde en totalTickets.
-
-Configurar el template (ticket-form.component.html):
-
-Crear un formulario con [formGroup]="ticketForm".
-
-Agregar un input con formControlName="adultTickets". Agregar un input con formControlName="childTickets".
-
-Agregar un botón que al hacer clic ejecute el método calculateTotal().
-
-Mostrar el resultado en un
-
-con el texto:
-
-🎟️ Total de Entradas: X
-
-Incorporar el componente en la aplicación:
-Incorporar el componente en app.html
-
-##### **Plus (opcional):**
-
--  Agregar estilos correspondientes tanto para desktop como para mobile, asegurando que sea responsivo y tenga diseño/colores diferentes.
-
+Opcional: agregar sección ruteada para el ejercicio de Entradas/Tickets.
+Opcional: Prácticas online de ruteo: https://angular.dev/tutorials/learn-angular/13-define-a-route#define-a-route-in-approutests
 
 ----------
+
 
 ## Ejercicio 9: Datos inyectados desde servicios 
 
@@ -196,31 +179,11 @@ Implementar OnInit (interfaz) desde la declaración de nuestra clase:
 
 
 
-## **Ejercicio 11: Ruteo y Navegación**
-
-#### Objetivo:
-Armar ruteo para 2 páginas y re-estructuración de app para envolver nuestros componentes.
-
-#### Pasos:
-Antes de empezar, necesitamos limpiar nuestro app.component.html, de manera que únicamente nos quede header, footer y router-outlet: 
-
-    <app-header></app-header>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
-
-Crear 2 componentes que vamos a usar para "envolver" a otros componentes:
-Crear componente llamado **Ejercicios**, para contener los componentes que hicimos de ejercicios, para esto, implementamos los selectores de cada componente de ejercicio y los importamos.
-Crear componente llamado **Movies**, para contener los componentes de movie list. 
-
-
-En el archivo app.routes.ts, agregar 2 paths: pelis y ejercicios. Cada uno con su componente MovieComponent y EjerciciosComponent respectivamente.
-
-Opcional: agregar sección ruteada para el ejercicio de Entradas/Tickets.
-Opcional: Prácticas online de ruteo: https://angular.dev/tutorials/learn-angular/13-define-a-route#define-a-route-in-approutests
 
 
 
-## Ejercicio 12: Integración con endpoints de APIs mediante HTTP GET
+
+## Ejercicio 11: Integración con endpoints de APIs mediante HTTP GET
 
 1. Configurar HTTP.
    En app.config.ts, configuramos http con provideHttpClient() para poder inyectarlo en los servicios.
@@ -267,6 +230,49 @@ Ejemplo de suscripción:
 
 
 Guía Obvservable: https://rxjs.dev/guide/observable 
+----------
+
+## Ejercicio 12: Reactive Forms - Formulario de Tickets
+Crear componente para el formulario: ng generate component ticket-form
+
+Configurar el formulario en el componente TS (ticket-form.component.ts):
+
+Importar dependencias:
+
+- import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms'; 
+- imports: [ReactiveFormsModule],
+
+Crear una propiedad ticketForm de tipo FormGroup con dos controles:
+
+adultTickets inicializado en 0. childTickets inicializado en 0.
+
+Crear una variable totalTickets.
+
+Crear un método calculateTotal() que sume los valores de adultTickets y childTickets y los guarde en totalTickets.
+
+Configurar el template (ticket-form.component.html):
+
+Crear un formulario con [formGroup]="ticketForm".
+
+Agregar un input con formControlName="adultTickets". Agregar un input con formControlName="childTickets".
+
+Agregar un botón que al hacer clic ejecute el método calculateTotal().
+
+Mostrar el resultado en un
+
+con el texto:
+
+🎟️ Total de Entradas: X
+
+Incorporar el componente en la aplicación:
+Incorporar el componente en app.html
+
+##### **Plus (opcional):**
+
+-  Agregar estilos correspondientes tanto para desktop como para mobile, asegurando que sea responsivo y tenga diseño/colores diferentes.
+
+
+----------
 
 ## Ejercicio 13: Accesibilidad
 1. Accesibilidad: agregar 1 ARIA y probar https://www.w3schools.com/accessibility/accessibility_screen_readers.php
