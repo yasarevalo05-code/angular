@@ -1,0 +1,51 @@
+# Ejercicios con prácticas adicional-opcionales:
+
+### Reactive Forms - Formulario de Tickets
+Teoría: https://angular.dev/guide/forms/reactive-forms
+Crear componente para el formulario: ng generate component ticket-form
+
+Configurar el formulario en el componente TS (ticket-form.component.ts):
+
+Importar dependencias:
+
+- import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms'; 
+- imports: [ReactiveFormsModule],
+
+Crear una propiedad ticketForm de tipo FormGroup con dos controles:
+
+adultTickets inicializado en 0. childTickets inicializado en 0.
+
+Crear una variable totalTickets.
+
+Crear un método calculateTotal() que sume los valores de adultTickets y childTickets y los guarde en totalTickets.
+
+Configurar el template (ticket-form.component.html):
+
+Crear un formulario con [formGroup]="ticketForm".
+
+Agregar un input con formControlName="adultTickets". Agregar un input con formControlName="childTickets".
+
+Agregar un botón que al hacer clic ejecute el método calculateTotal().
+
+Mostrar el resultado en un
+
+con el texto:
+
+🎟️ Total de Entradas: X
+
+Incorporar el componente en la aplicación:
+Incorporar el componente en app.html
+
+##### **Plus **
+
+-  Agregar estilos correspondientes tanto para desktop como para mobile, asegurando que sea responsivo y tenga diseño/colores diferentes.
+
+
+----------
+
+### Accesibilidad
+1. Accesibilidad: agregar 1 ARIA y probar https://www.w3schools.com/accessibility/accessibility_screen_readers.php
+
+### Desarrollar con endpoints locales:
+1. Agregar 1 test para 1 componente.
+2. Configurar ambiente local para consumir api local (creada en clase backend).
