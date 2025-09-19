@@ -232,7 +232,19 @@ Ejemplo de suscripción:
 Guía Obvservable: https://rxjs.dev/guide/observable 
 ----------
 
-## Ejercicio 12: Reactive Forms - Formulario de Tickets
+
+
+
+
+
+
+
+
+
+# Ejercicios con prácticas adicional-opcionales:
+
+### Reactive Forms - Formulario de Tickets
+Teoría: https://angular.dev/guide/forms/reactive-forms
 Crear componente para el formulario: ng generate component ticket-form
 
 Configurar el formulario en el componente TS (ticket-form.component.ts):
@@ -267,17 +279,17 @@ con el texto:
 Incorporar el componente en la aplicación:
 Incorporar el componente en app.html
 
-##### **Plus (opcional):**
+##### **Plus **
 
 -  Agregar estilos correspondientes tanto para desktop como para mobile, asegurando que sea responsivo y tenga diseño/colores diferentes.
 
 
 ----------
 
-## Ejercicio 13: Accesibilidad
+### Accesibilidad
 1. Accesibilidad: agregar 1 ARIA y probar https://www.w3schools.com/accessibility/accessibility_screen_readers.php
 
-## Ejercicio 14: Desarrollar las siguientes consignas (son opcionales)
+### Desarrollar con endpoints locales:
 1. Agregar 1 test para 1 componente.
 2. Configurar ambiente local para consumir api local (creada en clase backend).
 
