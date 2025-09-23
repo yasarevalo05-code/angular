@@ -163,16 +163,25 @@ Compartir datos a componentes mediante inyección de dependencias
 Crear servicio a través de angular cli: ng g service, nombre a elección (ej. movie).
 En el servicio, crear un método que retorne el array de objetos de las pelis del componente (movie-list), generado en el ejercicio 7.
 Inyectar el servicio en el componente (movie-list) para obtener las pelis desde el servicio.
-Invocar el método del servicio que retorna las pelis y asignarlo a nuestra variable. 
-Opcional: desde el constructor, ó, desde el método de inicialización (ngOnInit): https://angular.dev/api/core/OnInit?tab=api
-Ejemplo:
+Invocar el método del servicio que retorna las pelis y asignarlo a nuestra variable desde el método de inicialización del componente (ngOnInit): https://angular.dev/api/core/OnInit?tab=api
+
+Lectura complementaria:
+En Angular, los ciclos de vida son métodos especiales que permiten reaccionar en distintos momentos de la vida de un componente.
+Un componente nace, se actualiza y muere, y cada hook sirve para implementar lógica en esas etapas.
+
+Los fundamentales:
+
+ngOnInit → se ejecuta al iniciar el componente, ideal para cargar datos.
+ngOnChanges → se dispara cuando cambian los inputs del componente.
+ngOnDestroy → se ejecuta justo antes de que el componente se destruya, usado para limpiar suscripciones o recursos.
+
 
 
        ngOnInit(): void {
          this.movies = this.movieService.getMovies(); 
       }
 
-Implementar OnInit (interfaz) desde la declaración de nuestra clase:
+Implementar OnInit desde la declaración de nuestra clase:
 
 
     export  class  MovieListComponent  implements  OnInit {
