@@ -178,18 +178,8 @@ Los fundamentales:
 
 
        ngOnInit(): void {
-         this.movies = this.movieService.getMovies(); 
-      }
-
-Implementar OnInit desde la declaración de nuestra clase:
-
-
-    export  class  MovieListComponent  implements  OnInit {
-
-
-
-
-
+         this.movies = this.movieService.getMovies();
+   
 
 
 ## Ejercicio 11: Integración con endpoints de APIs mediante HTTP GET
