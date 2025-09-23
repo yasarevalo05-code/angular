@@ -171,9 +171,9 @@ Un componente nace, se actualiza y muere, y cada hook sirve para implementar ló
 
 Los fundamentales:
 
-ngOnInit → se ejecuta al iniciar el componente, ideal para cargar datos.
-ngOnChanges → se dispara cuando cambian los inputs del componente.
-ngOnDestroy → se ejecuta justo antes de que el componente se destruya, usado para limpiar suscripciones o recursos.
+-  ngOnInit → se ejecuta al iniciar el componente, ideal para cargar datos.
+-  ngOnChanges → se dispara cuando cambian los inputs del componente.
+-  ngOnDestroy → se ejecuta justo antes de que el componente se destruya, usado para limpiar suscripciones o recursos.
 
 
 
