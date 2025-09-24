@@ -137,7 +137,6 @@ Crear componente llamado **Movies**, para contener los componentes de movie list
 
 En el archivo app.routes.ts, agregar 2 paths: pelis y ejercicios. Cada uno con su componente MovieComponent y EjerciciosComponent respectivamente.
 
-Opcional: agregar sección ruteada para el ejercicio de Entradas/Tickets.
 Opcional: Prácticas online de ruteo: https://angular.dev/tutorials/learn-angular/13-define-a-route#define-a-route-in-approutests
 
 ----------
