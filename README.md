@@ -181,7 +181,8 @@ Los fundamentales:
    
 
 
-## Ejercicio 11: Integración con endpoints de APIs mediante HTTP GET
+## Ejercicio 11 (opcional): Integración con endpoints de APIs mediante HTTP GET
+Nota: Este ejercicio es opcional. Se recomienda realizarlo para mejorar la comprensión del uso de observables y APIs.
 
 1. Configurar HTTP.
    En app.config.ts, configuramos http con provideHttpClient() para poder inyectarlo en los servicios.
