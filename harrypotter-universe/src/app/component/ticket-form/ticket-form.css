@@ -1,0 +1,257 @@
+/* ========================================
+   CONTENEDOR PRINCIPAL
+======================================== */
+.ticket-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Cinzel Decorative', serif;
+  color: #fdf5e6;
+}
+
+/* ========================================
+  FONDO DEL EXPRESO
+======================================== */
+.background-img {
+  position: absolute;
+  top: 0;
+  left: -135px;
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  z-index: 1;
+}
+
+/* ========================================
+  FORMULARIO / FORM-CARD
+======================================== */
+.form-card {
+  position: relative;
+  z-index: 2;
+  width: 350px;
+  height: 500px;
+  padding:30px;
+  background: rgba(32, 9, 9, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 0 15px gold;
+  margin-right: 5%;
+  animation: fadeIn 1.2s ease;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Títulos */
+h2 {
+  text-align: center;
+  color: gold;
+  text-shadow: 0 0 8px #b8860b;
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  font-size: 0.9rem;
+  color: #d8c690;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ========================================
+  FORMULARIO
+======================================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: bold;
+  color: #fce8b2;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid gold;
+  border-radius: 6px;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px gold;
+}
+
+/* Botones */
+.btn-calcular {
+    margin-top: 10px;
+  padding: 0.6rem;
+  background: linear-gradient(90deg, #b8860b, #daa520);
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 20px gold;
+  transform: scale(1.05);
+}
+.show-ticket-btn{
+    display: flex;
+    margin-top: -10px;
+    margin-left: 150px;
+    padding: 5px;
+  background: linear-gradient(90deg, #b8860b, #daa520);
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+/* Resultado total */
+.resultado {
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 1.2rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px #b8860b;
+}
+
+/* ========================================
+  RESPONSIVE
+======================================== */
+@media (max-width: 768px) {
+  .ticket-container {
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .form-card {
+    width: 90%;
+    margin-right: 0;
+  }
+
+  .background-img {
+    background-position: 70%;
+  }
+}
+
+/* ========================================
+  TICKET 
+======================================== */
+.hogwarts-ticket {
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 580px;
+  height: 300px;
+  border: 3px solid #b8860b;
+  border-radius: 12px;
+  background: #fdf0c5 url('/recursos/ticket.jpg') center/cover no-repeat;
+  box-shadow: 0 0 25px rgba(184, 134, 11, 0.6);
+  font-family: 'Cinzel Decorative', serif;
+  color: #11100e;
+  animation: ticketAppear 0.8s ease forwards;
+  overflow: hidden;
+}
+
+/* Animación de aparición del ticket */
+@keyframes ticketAppear {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+
+.ticket-header {
+  margin-top: 45px;
+  margin-left: 150px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.ticket-body  {
+  font-size: 13px;
+  color: #0c0b0a;
+  margin-top: 130px;
+    margin-left: 230px;
+}
+
+
+.ticket-body p{
+  color: #0c0b0a;
+  margin-top: -15px
+}
+
+.ticket-body strong { 
+    color: #ffd700;
+    text-shadow: 0 0 3px #000, 0 0 5px #000; 
+    font-weight: bold;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #8b0000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.2s;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  color: darkred;
+}
+
+/* ========================================
+  FONDO OSCURO DETRÁS DEL TICKET 
+======================================== */
+.ticket-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  animation: fadeInOverlay 0.3s ease;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

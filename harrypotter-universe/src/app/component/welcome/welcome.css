@@ -1,0 +1,59 @@
+.welcome-container {
+    background-image: url('/recursos/fondo_welcome.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    padding: 170px;
+    position: relative;
+    overflow: hidden;
+    height: 50vb;
+    box-shadow: 0 0 20px rgba(23, 115, 235, 0.3);
+}
+
+h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 30px;
+    text-shadow: 2px 2px 40px rgb(0, 0, 0);
+    margin-top: 8%;
+}
+
+.secret {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 15px;
+    color: gold;
+    text-shadow: 0 0 15px #000;
+    animation: appear 1s ease forwards;
+}
+
+.spell {
+    margin-top: 40px;
+    display: inline-block;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.281);
+    text-shadow: 0 0 5px transparent;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.spell:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 15px rgb(255, 255, 255), 0 0 30px #fffcec;
+    transform: scale(1.1);
+}
+
+/* Animación del mensaje secreto */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+        filter: brightness(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}

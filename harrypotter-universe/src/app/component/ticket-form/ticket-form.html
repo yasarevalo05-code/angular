@@ -1,0 +1,44 @@
+<div class="ticket-container">
+  <img src="/recursos/expreso.jpg" class="background-img">
+
+  <div class="form-card">
+    <h2>🎟️ Billete para el Expreso de Hogwarts</h2>
+    <p class="intro">¡Reserva tu asiento para el viaje más mágico del mundo!</p>
+
+    <form [formGroup]="ticketForm" aria-label="Formulario de compra de tickets mágicos">
+      <label for="passengerName">Nombre del pasajero:</label>
+      <input id="passengerName" type="text" formControlName="passengerName" placeholder="Tu nombre mágico" />
+
+      <label for="adultTickets">Entradas para adultos:</label>
+      <input id="adultTickets" type="number" min="0" formControlName="adultTickets" />
+
+      <label for="childTickets">Entradas para niños:</label>
+      <input id="childTickets" type="number" min="0" formControlName="childTickets" />
+
+      <button type="button" (click)="calculateTotal()" class="btn-calcular">Calcular Total </button>
+    </form>
+
+    <p class="resultado" *ngIf="totalTickets > 0">
+      Total de Entradas: <strong>{{ totalTickets }}</strong>
+    </p>
+
+    <button *ngIf="totalTickets > 0 && !showTicket" (click)="displayTicket()" class="show-ticket-btn">Ver Ticket</button>
+  </div>
+</div> 
+
+<!-- Fondo oscuro detrás del ticket -->
+<div class="ticket-overlay" *ngIf="showTicket" (click)="showTicket = false"></div>
+
+<div class="hogwarts-ticket" *ngIf="showTicket">
+  <button class="close-btn" (click)="showTicket = false">✖</button>
+
+    <div class="ticket-header">
+      <p>LONDON TO HOGWARTS</p>
+    </div>
+    <div class="ticket-body">
+      <p>Pasajero: <strong>{{ ticketForm.get('passengerName')?.value || 'Mago/Maga' }}</strong></p>
+      <p>Entradas: <strong>{{ totalTickets }}</strong></p>
+      <p>Fecha: <strong>{{ travelDate }}</strong></p>
+    </div>
+  </div>
+

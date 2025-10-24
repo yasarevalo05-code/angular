@@ -1,0 +1,24 @@
+<div class="spell-fondo">
+<br>
+<h2>Lista de Hechizos de Hogwarts</h2>
+
+<div class="spell-list">
+  <app-spell-item
+    *ngFor="let spell of spells"
+    [spell]="spell"
+    (spellSelected)="onSpellSelected($event)">
+  </app-spell-item>
+</div>
+
+<!-- Modal de hechizo seleccionado -->
+<div class="spell-modal" *ngIf="selectedSpell">
+  <!-- Brillo central -->
+  <div class="magic-overlay" *ngIf="showMagic"></div>
+
+  <div class="spell-modal-card">
+    <h2>{{ selectedSpell }}</h2>
+    <img src="/recursos/baritaMagica.png" alt="baritaMagica">
+    <button (click)="closeSpell()">Cerrar</button>
+  </div>
+</div>
+</div>

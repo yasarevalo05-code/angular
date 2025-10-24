@@ -1,0 +1,12 @@
+.footer-container {
+  background-color: #00000f;
+  color: #f8f3dc;
+  text-align: center;
+  padding: 15px;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-top: 2px solid #d4af37;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+  
+}

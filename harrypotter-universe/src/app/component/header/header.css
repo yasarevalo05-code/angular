@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+.hp-header {
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(0, 0, 39);
+  border: none;
+  height: 100px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+.header-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85));
+  height: 100%;
+  width: 100%;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  height: 100%;
+  padding: 0 40px;
+}
+
+/* === LOGO === */
+.logo_header {
+  width: 160px;
+  height: auto;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.logo_header:hover {
+  filter: drop-shadow(0 0 25px #f1ff71);
+}
+
+/* === MENÚ === */
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  color: #fff8dc;
+  text-decoration: none;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 20px;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.menu li a:hover {
+  color: #FFD700;
+  text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500;
+}
+
+/* === IMAGEN DE HARRY === */
+.harry-img {
+  position: absolute;
+  top: 105%;
+  left: 250px;
+  transform: translateY(-50%) scale(0.8);
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  width: 400px;
+  filter: drop-shadow(0 0 25px #000000);
+  pointer-events: none;
+}
+
+.logo-container:hover .harry-img {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+
+}

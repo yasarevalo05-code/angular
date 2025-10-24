@@ -1,0 +1,20 @@
+<header class="hp-header">
+
+  <div class="header-overlay">
+    <div class="header-bar">
+      <div class="logo-container">
+        <img src="recursos/logo_header.png" alt="Escudo de Hogwarts" class="logo_header">
+        <!-- Imagen de Harry que aparecerá -->
+        <img src="recursos/harryCara.png" alt="Harry Potter" class="harry-img">
+      </div>
+
+      <nav>
+        <ul class="menu">
+          <li *ngFor="let item of menuItems">
+            <a [routerLink]="item.link" routerLinkActive="active">{{ item.label }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

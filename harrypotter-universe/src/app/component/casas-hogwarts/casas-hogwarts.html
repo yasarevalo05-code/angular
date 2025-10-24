@@ -1,0 +1,36 @@
+<div class="houses-header">
+  <h1 class="houses-title">Conoce las Casas de Hogwarts</h1>
+</div>
+
+
+  <div class="house-section" *ngFor="let casa of casas; let i = index" [ngClass]="casa.nombre.toLowerCase()">
+    <div class="overlay"></div>
+
+    <div class="house-content">
+      <!--Carrusel de imágenes-->
+      <div class="house-slider">
+        <img [src]="casa.imagenes[imagenActual[i]]" [alt]="casa.nombre">
+      </div>
+
+      <!-- Tarjeta-->
+      <div class="card">
+        <div class="card-inner">
+          <!-- Frente -->
+          <div class="card-front">
+            <img [src]="casa.logo" [alt]="casa.nombre" class="house-logo">
+          </div>
+
+          <!-- Reverso -->
+          <div class="card-back">
+            <h2>{{ casa.nombre }}</h2>
+            <p><strong>Fundador:</strong> {{ casa.fundador }}</p>
+            <p><strong>Cualidades:</strong> {{ casa.cualidades }}</p>
+            <p><strong>Lider:</strong> {{ casa.lider }}</p>
+            <p><strong>Lema:</strong> {{ casa.lema }}</p>
+            <p><strong>Animal:</strong> {{ casa.animal }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,9 @@
+<div class="welcome-container">
+  <h1>{{ message1 }}</h1>
+
+  <p *ngIf="showSecret" class="secret">{{ message2 }}</p>
+
+  <p class="spell" (click)="showSecret = !showSecret">
+    {{ showSecret ? '✨ Nox ✨' : '✨ Lumos ✨' }}
+  </p>
+</div>

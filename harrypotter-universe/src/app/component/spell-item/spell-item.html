@@ -1,0 +1,5 @@
+<div class="spell-card">
+  <h3>{{ spell.name }}</h3>
+  <p *ngIf="spell.description"><strong>Descripción:</strong> {{ spell.description }}</p>
+  <button (click)="selectSpell()">Seleccionar</button>
+</div>
